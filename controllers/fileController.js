@@ -6,7 +6,7 @@ const path = require("path")
 const fileUpload=(req,res,next)=>{
 // console.log(req.headers.pin,req.params);
 // console.log(req.files.file.path.split("uploads\\")[1])
-  let fileUploads = (`https://file-upload-system-new.onrender.com/${req.files.file.path.split("uploads\\")[1]}`);
+  let fileUploads = (`https://file-upload-system-new.onrender.com/${req.files.file.path.split("uploads/")[1]}`);
   
     UserFileData(req.params.id,req.headers.pin,fileUploads).then(data=>{
       res.json({

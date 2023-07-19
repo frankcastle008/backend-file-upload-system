@@ -6,9 +6,10 @@ const user = require("./routes/user")
 const cors  = require("cors");
 const {errorMiddleware} = require("./middlewares/middlewares") 
 
+app.use(cors());
 app.use(express.static("uploads"));
 const URL = "mongodb+srv://adityadixit113:jmQFE3f02Q18DMyw@cluster0.eoo3agr.mongodb.net/?retryWrites=true&w=majority"
-app.use(cors());
+
 app.use(express.json())
 // app.get("/",(req,res)=>{
 //     res.send("hello world");
